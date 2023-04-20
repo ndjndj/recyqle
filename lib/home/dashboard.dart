@@ -8,7 +8,7 @@ class DashBoard extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Card(
-      elevation: 4.0,
+      elevation: 8.0,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -22,6 +22,7 @@ class DashBoard extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
             child: Card(
+              elevation: 8.0,
               child: SizedBox(
                 width: double.infinity,
                 height: 150,
@@ -70,12 +71,14 @@ class DashBoard extends StatelessWidget {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 child: Column(
                   children: [
                     Text("トクイ"),
                     Card(
+                      elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
                         height: 150,
@@ -90,6 +93,7 @@ class DashBoard extends StatelessWidget {
                   children: [
                     Text("ニガテ"),
                     Card(
+                      elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
                         height: 150,

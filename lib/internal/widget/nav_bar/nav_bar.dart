@@ -1,12 +1,13 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
+import "package:recyqle/home/dashboard.dart";
 
 class NavBar {
   static const List<Map<String, dynamic>> navBarItems = [
     {
       'label': 'home',
       'icon': FaIcon(FontAwesomeIcons.house, size: 20),
-      'page': Text("home"),
+      'page': DashBoard(),
     },
     {
       'label': 'add',

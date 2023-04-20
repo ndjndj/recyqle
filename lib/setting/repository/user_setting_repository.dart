@@ -152,6 +152,7 @@ final themeProvider = StateNotifierProvider<ThemeDataRepository, ThemeData>(
   (ref) {
     return ThemeDataRepository(
       ThemeData.from(
+        useMaterial3: true,
         colorScheme: MasterColorSchemePreset.defaultLightScheme,
         textTheme: GoogleFonts.murechoTextTheme()
       ),

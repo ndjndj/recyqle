@@ -32,10 +32,11 @@ class Main extends ConsumerWidget {
     ref.watch(colorSchemeProvider);
 
     return MaterialApp(
-      title: 'Pecoma',
+      title: 'Re:q',
       themeMode: themeMode ?? ThemeMode.system,
       theme: ref.watch(themeProvider),
       darkTheme: ThemeData.from(
+        useMaterial3: true,
         colorScheme: MasterColorSchemePreset.defaultDarkScheme,
         textTheme: GoogleFonts.murechoTextTheme(
           MasterColorSchemePreset.defaultDarkTextTheme
@@ -87,7 +88,7 @@ class _TopState extends State<Top> {
 
     return KeyboardDismissOnTap(
       child: Scaffold(
-        //resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: false,
         key: scaffoldKey,
         //drawer: PecoDrawer(callbackChangeTabIndex: setScreenIndex,),
         //appBar: PecoAppbar(scaffoldKey: scaffoldKey,),

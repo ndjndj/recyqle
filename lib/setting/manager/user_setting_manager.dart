@@ -1,7 +1,7 @@
 import 'package:isar/isar.dart';
+import 'package:recyqle/setting/model/user_setting.dart';
 
-import 'package:proto/model/isar/settings/user_setting.dart';
-import 'package:proto/model/isar/settings/user_setting_theme.dart';
+
 
 class UserSettingManager {
   const UserSettingManager({

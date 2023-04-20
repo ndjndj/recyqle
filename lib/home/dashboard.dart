@@ -49,10 +49,12 @@ class DashBoard extends StatelessWidget {
                     Text(
                       "ケイゾク",
                       style: GoogleFonts.rocknRollOne(
-                        fontSize: 24,
+                        fontSize: 16,
                       )
                     ),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.ideographic,
                       children: [
                         Text(
                           "17",
@@ -63,7 +65,7 @@ class DashBoard extends StatelessWidget {
                         Text(
                           "ニチ",
                           style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
+                            fontSize: 12,
                           )
                         )
                       ],
@@ -75,10 +77,12 @@ class DashBoard extends StatelessWidget {
                     Text(
                       "レンゾク",
                       style: GoogleFonts.rocknRollOne(
-                        fontSize: 24,
+                        fontSize: 16,
                       )
                     ),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.ideographic,
                       children: [
                         Text(
                           "17",
@@ -89,7 +93,7 @@ class DashBoard extends StatelessWidget {
                         Text(
                           "モン",
                           style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
+                            fontSize: 12,
                           )
                         )
                       ],
@@ -101,10 +105,12 @@ class DashBoard extends StatelessWidget {
                     Text(
                       "ジゾク",
                       style: GoogleFonts.rocknRollOne(
-                        fontSize: 24,
+                        fontSize: 16,
                       )
                     ),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.ideographic,
                       children: [
                         Text(
                           "17",
@@ -115,7 +121,7 @@ class DashBoard extends StatelessWidget {
                         Text(
                           "ジカン",
                           style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
+                            fontSize: 12,
                           )
                         )
                       ],

@@ -46,33 +46,78 @@ class DashBoard extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Text("ケイゾク"),
+                    Text(
+                      "ケイゾク",
+                      style: GoogleFonts.rocknRollOne(
+                        fontSize: 24,
+                      )
+                    ),
                     Row(
                       children: [
-                        Text("17"),
-                        Text("ニチ")    
+                        Text(
+                          "17",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        ),
+                        Text(
+                          "ニチ",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        )
                       ],
                     )
                   ],
                 ),
                 Column(
                   children: [
-                    Text("レンゾク"),
+                    Text(
+                      "レンゾク",
+                      style: GoogleFonts.rocknRollOne(
+                        fontSize: 24,
+                      )
+                    ),
                     Row(
                       children: [
-                        Text("17"),
-                        Text("モン")    
+                        Text(
+                          "17",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        ),
+                        Text(
+                          "モン",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        )
                       ],
                     )
                   ],
                 ),
                 Column(
                   children: [
-                    Text("ジゾク"),
+                    Text(
+                      "ジゾク",
+                      style: GoogleFonts.rocknRollOne(
+                        fontSize: 24,
+                      )
+                    ),
                     Row(
                       children: [
-                        Text("17"),
-                        Text("ジカン")    
+                        Text(
+                          "17",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        ),
+                        Text(
+                          "ジカン",
+                          style: GoogleFonts.rocknRollOne(
+                            fontSize: 24,
+                          )
+                        )
                       ],
                     )
                   ],

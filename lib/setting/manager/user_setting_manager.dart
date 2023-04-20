@@ -1,8 +1,6 @@
 import 'package:isar/isar.dart';
 import 'package:recyqle/setting/model/user_setting.dart';
 
-
-
 class UserSettingManager {
   const UserSettingManager({
     required this.isar

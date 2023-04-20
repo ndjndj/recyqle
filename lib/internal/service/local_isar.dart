@@ -15,7 +15,8 @@ final isarProvider = FutureProvider(
 class LocalIsar {
   const LocalIsar._();
   static final List<CollectionSchema<dynamic>> schemas = [
-    
+    UserSettingSchema,
+    MasterColorSchemeSchema
   ];
   static const bool useInspector = true;
 

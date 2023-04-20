@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({
@@ -8,15 +9,24 @@ class DashBoard extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+        side: BorderSide(
+          color: Color(0xFF333333)
+        )
+      ),
       elevation: 8.0,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
             child: Text(
               "dashboard",
               textAlign: TextAlign.left,
+              style: GoogleFonts.righteous(
+                fontSize: 24,
+              )
             ),
           ),
           const Padding(

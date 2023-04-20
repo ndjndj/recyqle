@@ -1,81 +1,103 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import "package:flutter_localizations/flutter_localizations.dart";
+import "package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart";
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:recyqle/internal/widget/restart.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  runApp(
+    const Restart(
+      child: ProviderScope(
+        child: MaterialApp(
+          home: Main(),
+        )
+      )
+    )
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Main extends ConsumerWidget {
+  const Main({super.key});
 
-  // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final themeMode = ref.watch(themeModeProvider).value;
+    ref.watch(colorSchemeProvider);
+
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Pecoma',
+      themeMode: themeMode ?? ThemeMode.system,
+      theme: ref.watch(themeProvider),
+      darkTheme: ThemeData.from(
+        colorScheme: MasterColorSchemePreset.defaultDarkScheme,
+        textTheme: GoogleFonts.murechoTextTheme(
+          MasterColorSchemePreset.defaultDarkTextTheme
+        )
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      supportedLocales: const [Locale('ja', 'JP')],
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        DefaultCupertinoLocalizations.delegate
+      ],
+      home: const Top()
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
+class Top extends StatefulWidget {
+  const Top({
+    super.key,
+    this.initialIndex = 0
+  });
+
+  final int initialIndex;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<Top> createState() => _TopState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _TopState extends State<Top> {
+  late int _currentIndex;
 
-  void _incrementCounter() {
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = 0;
+  }
+
+  void setScreenIndex(int index) {
     setState(() {
-      _counter++;
+      _currentIndex = index;
     });
   }
 
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+
+    return KeyboardDismissOnTap(
+      child: Scaffold(
+        //resizeToAvoidBottomInset: false,
+        key: scaffoldKey,
+        drawer: PecoDrawer(callbackChangeTabIndex: setScreenIndex,),
+        appBar: PecoAppbar(scaffoldKey: scaffoldKey,),
+        body: NavBar.navBarItems[_currentIndex]['page'],
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
+          unselectedItemColor: Theme.of(context).colorScheme.tertiary,
+          currentIndex: _currentIndex,
+          type: BottomNavigationBarType.fixed,
+          onTap: (index) => setScreenIndex(index),
+          items: NavBar.bottomNavBar()
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      )
     );
   }
 }

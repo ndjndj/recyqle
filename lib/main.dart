@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:recyqle/internal/color_scheme/service/master_color_scheme_preset.dart';
 import 'package:recyqle/internal/widget/nav_bar/nav_bar.dart';
+import 'package:recyqle/internal/widget/req_app_bar/req_app_bar.dart';
 import 'package:recyqle/internal/widget/restart.dart';
 import 'package:recyqle/setting/repository/user_setting_repository.dart';
 
@@ -91,7 +92,7 @@ class _TopState extends State<Top> {
         resizeToAvoidBottomInset: false,
         key: scaffoldKey,
         //drawer: PecoDrawer(callbackChangeTabIndex: setScreenIndex,),
-        //appBar: PecoAppbar(scaffoldKey: scaffoldKey,),
+        appBar: ReqAppBar(scaffoldKey: scaffoldKey,),
         body: NavBar.navBarItems[_currentIndex]['page'],
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Theme.of(context).colorScheme.secondary,

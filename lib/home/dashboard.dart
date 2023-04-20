@@ -11,15 +11,15 @@ class DashBoard extends StatelessWidget {
       elevation: 4.0,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Padding(
+        children: [
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
             child: Text(
               "dashboard",
               textAlign: TextAlign.left,
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
             child: Card(
               child: SizedBox(
@@ -29,6 +29,46 @@ class DashBoard extends StatelessWidget {
               ),
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+            child: Row(
+              children: [
+                Column(
+                  children: [
+                    Text("ケイゾク"),
+                    Row(
+                      children: [
+                        Text("17"),
+                        Text("ニチ")    
+                      ],
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("レンゾク"),
+                    Row(
+                      children: [
+                        Text("17"),
+                        Text("モン")    
+                      ],
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Text("ジゾク"),
+                    Row(
+                      children: [
+                        Text("17"),
+                        Text("ジカン")    
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

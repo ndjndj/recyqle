@@ -4,7 +4,10 @@ import "package:flutter_localizations/flutter_localizations.dart";
 import "package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart";
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recyqle/internal/color_scheme/service/master_color_scheme_preset.dart';
+import 'package:recyqle/internal/widget/nav_bar/nav_bar.dart';
 import 'package:recyqle/internal/widget/restart.dart';
+import 'package:recyqle/setting/repository/user_setting_repository.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -86,8 +89,8 @@ class _TopState extends State<Top> {
       child: Scaffold(
         //resizeToAvoidBottomInset: false,
         key: scaffoldKey,
-        drawer: PecoDrawer(callbackChangeTabIndex: setScreenIndex,),
-        appBar: PecoAppbar(scaffoldKey: scaffoldKey,),
+        //drawer: PecoDrawer(callbackChangeTabIndex: setScreenIndex,),
+        //appBar: PecoAppbar(scaffoldKey: scaffoldKey,),
         body: NavBar.navBarItems[_currentIndex]['page'],
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Theme.of(context).colorScheme.secondary,

@@ -68,7 +68,40 @@ class DashBoard extends StatelessWidget {
                 )
               ],
             ),
+          ),
+          Row(
+            children: [
+              SizedBox(
+                child: Column(
+                  children: [
+                    Text("トクイ"),
+                    Card(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 2.4,
+                        height: 150,
+                        child: Center(child: Text("graph")),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                child: Column(
+                  children: [
+                    Text("ニガテ"),
+                    Card(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 2.4,
+                        height: 150,
+                        child: Center(child: Text("graph")),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
           )
+          
         ],
       ),
     );

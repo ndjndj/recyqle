@@ -25,6 +25,7 @@ class Score extends StatelessWidget {
         ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.baseline,
+          mainAxisAlignment: MainAxisAlignment.end,
           textBaseline: TextBaseline.ideographic,
           children: [
             Text(

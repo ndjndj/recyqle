@@ -29,9 +29,15 @@ class DashBoard extends StatelessWidget {
               )
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
             child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+                side: BorderSide(
+                  color: Color(0xFF333333)
+                )
+              ),
               elevation: 8.0,
               child: SizedBox(
                 width: double.infinity,

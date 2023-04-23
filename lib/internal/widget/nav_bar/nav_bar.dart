@@ -8,7 +8,7 @@ class NavBar {
     {
       'label': 'home',
       'icon': FaIcon(FontAwesomeIcons.house, size: 20),
-      'page': Column(children: [DashBoard(), DoMyBest()])
+      'page': Column(children: [DashBoard()])
     },
     {
       'label': 'add',

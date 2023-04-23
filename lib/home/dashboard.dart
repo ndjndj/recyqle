@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recyqle/home/score.dart';
 
 class DashBoard extends StatelessWidget {
   const DashBoard({
@@ -48,90 +49,9 @@ class DashBoard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(
-                  children: [
-                    Text(
-                      "ケイゾク",
-                      style: GoogleFonts.rocknRollOne(
-                        fontSize: 16,
-                      )
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.ideographic,
-                      children: [
-                        Text(
-                          "17",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
-                          )
-                        ),
-                        Text(
-                          "ニチ",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 12,
-                          )
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      "レンゾク",
-                      style: GoogleFonts.rocknRollOne(
-                        fontSize: 16,
-                      )
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.ideographic,
-                      children: [
-                        Text(
-                          "17",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
-                          )
-                        ),
-                        Text(
-                          "モン",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 12,
-                          )
-                        )
-                      ],
-                    )
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text(
-                      "ジゾク",
-                      style: GoogleFonts.rocknRollOne(
-                        fontSize: 16,
-                      )
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.ideographic,
-                      children: [
-                        Text(
-                          "17",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 24,
-                          )
-                        ),
-                        Text(
-                          "ジカン",
-                          style: GoogleFonts.rocknRollOne(
-                            fontSize: 12,
-                          )
-                        )
-                      ],
-                    )
-                  ],
-                )
+                Score(title: "ケイゾク", score: 17.toString(), unit: "ニチ"),
+                Score(title: "レンゾク", score: 17.toString(), unit: "モン"),
+                Score(title: "ジゾク", score: 17.toString(), unit: "ジカン"),
               ],
             ),
           ),

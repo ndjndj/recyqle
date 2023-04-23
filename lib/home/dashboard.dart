@@ -34,9 +34,6 @@ class DashBoard extends StatelessWidget {
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
-                side: BorderSide(
-                  color: Color(0xFF333333)
-                )
               ),
               elevation: 8.0,
               child: SizedBox(

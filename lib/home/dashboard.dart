@@ -140,6 +140,7 @@ class DashBoard extends StatelessWidget {
             children: [
               SizedBox(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "トクイ",
@@ -164,6 +165,7 @@ class DashBoard extends StatelessWidget {
               ),
               SizedBox(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "ニガテ",

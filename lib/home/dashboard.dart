@@ -145,7 +145,7 @@ class DashBoard extends StatelessWidget {
                     Text(
                       "トクイ",
                       style: GoogleFonts.rocknRollOne(
-                        fontSize: 24,
+                        fontSize: 16,
                       ),
                       textAlign: TextAlign.start,
                     ),
@@ -170,7 +170,7 @@ class DashBoard extends StatelessWidget {
                     Text(
                       "ニガテ",
                       style: GoogleFonts.rocknRollOne(
-                        fontSize: 24,
+                        fontSize: 16,
                       ),
                       textAlign: TextAlign.start,
                     ),

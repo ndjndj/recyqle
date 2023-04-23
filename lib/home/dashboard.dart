@@ -141,7 +141,13 @@ class DashBoard extends StatelessWidget {
               SizedBox(
                 child: Column(
                   children: [
-                    Text("トクイ"),
+                    Text(
+                      "トクイ",
+                      style: GoogleFonts.rocknRollOne(
+                        fontSize: 24,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
                     Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -159,7 +165,13 @@ class DashBoard extends StatelessWidget {
               SizedBox(
                 child: Column(
                   children: [
-                    Text("ニガテ"),
+                    Text(
+                      "ニガテ",
+                      style: GoogleFonts.rocknRollOne(
+                        fontSize: 24,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
                     Card(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),

@@ -149,7 +149,7 @@ class DashBoard extends StatelessWidget {
                       elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
-                        height: 150,
+                        height: 100,
                         child: Center(child: Text("graph")),
                       ),
                     ),
@@ -167,7 +167,7 @@ class DashBoard extends StatelessWidget {
                       elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
-                        height: 150,
+                        height: 100,
                         child: Center(child: Text("graph")),
                       ),
                     ),

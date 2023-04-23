@@ -44,10 +44,11 @@ class DashBoard extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+          Container(
+            color: const Color.fromARGB(255, 173, 177, 243),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 4.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Score(title: "ケイゾク", score: 17.toString(), unit: "ニチ"),
                 Score(title: "レンゾク", score: 17.toString(), unit: "モン"),

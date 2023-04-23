@@ -30,7 +30,7 @@ class Score extends StatelessWidget {
             Text(
               score,
               style: GoogleFonts.rocknRollOne(
-                fontSize: 24,
+                fontSize: 32,
               )
             ),
             Text(

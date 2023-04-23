@@ -143,6 +143,9 @@ class DashBoard extends StatelessWidget {
                   children: [
                     Text("トクイ"),
                     Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,
@@ -158,6 +161,9 @@ class DashBoard extends StatelessWidget {
                   children: [
                     Text("ニガテ"),
                     Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       elevation: 8.0,
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width / 2.4,

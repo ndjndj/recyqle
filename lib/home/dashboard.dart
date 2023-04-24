@@ -72,7 +72,7 @@ class DashBoard extends StatelessWidget {
                     Score(title: "チョウセン", score: 17, unit: "カイ", sizingFactor: 0.6),
                   ],
                   width: MediaQuery.of(context).size.width / 2.2,
-                  height: 140
+                  height: 120
                 )
               ),
               SizedBox(

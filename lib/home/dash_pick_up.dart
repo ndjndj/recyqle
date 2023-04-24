@@ -32,24 +32,34 @@ class DashPickUp extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           elevation: 8.0,
-          child: SizedBox(
+          child: Container(
+            alignment: Alignment.center,
             width: width,
             height: height,
             child: Column(
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        "No.${no.toString()}"
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                    top: 8.0,
+                    right: 8.0,
+                    bottom: 4.0
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          "No.${no.toString()}"
+                        ),
                       ),
-                    ),
 
-                    Text(
-                      DateFormat("yyyy/MM/dd").format(date)
-                    )
-                  ],
+                      Text(
+                        DateFormat("yyyy/MM/dd").format(date)
+                      )
+                    ],
+                  ),
                 ),
+                
                 Text(issueTitle),
                 Row(
                   children: scores,

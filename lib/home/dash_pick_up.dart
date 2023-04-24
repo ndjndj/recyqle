@@ -66,7 +66,9 @@ class DashPickUp extends StatelessWidget {
                   ),
                 ),
                 
-                Text(issueTitle),
+                Text(
+                  issueTitle,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: scores,

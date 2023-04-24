@@ -10,7 +10,7 @@ class Score extends StatelessWidget {
   });
 
   final String title;
-  final String score;
+  final int score;
   final String unit;
 
   @override 
@@ -29,7 +29,7 @@ class Score extends StatelessWidget {
           textBaseline: TextBaseline.ideographic,
           children: [
             Text(
-              score,
+              score.toString(),
               style: GoogleFonts.rocknRollOne(
                 fontSize: 32,
               )

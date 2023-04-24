@@ -10,7 +10,8 @@ class DashPickUp extends StatelessWidget {
     required this.date,
     required this.issueTitle,
     this.scores = const [],
-    required this.size
+    required this.width,
+    required this.height
   });
 
   final int no;
@@ -18,7 +19,8 @@ class DashPickUp extends StatelessWidget {
   final DateTime date;
   final String issueTitle;
   final List<Score> scores;
-  final Size size;
+  final double width;
+  final double height;
 
   @override 
   Widget build(BuildContext context) {
@@ -31,8 +33,8 @@ class DashPickUp extends StatelessWidget {
           ),
           elevation: 8.0,
           child: SizedBox(
-            width: size.width,
-            height: size.height,
+            width: width,
+            height: height,
             child: Column(
               children: [
                 Row(

@@ -22,34 +22,39 @@ class DashPickUp extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      elevation: 8.0,
-      child: SizedBox(
-        width: size.width,
-        height: size.height,
-        child: Column(
-          children: [
-            Row(
+    return Column(
+      children: [
+        Text(mainTitle),
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          elevation: 8.0,
+          child: SizedBox(
+            width: size.width,
+            height: size.height,
+            child: Column(
               children: [
-                Text(
-                  "No.${no.toString()}"
-                ),
+                Row(
+                  children: [
+                    Text(
+                      "No.${no.toString()}"
+                    ),
 
-                Text(
-                  DateFormat("yyyy/MM/dd").format(date)
+                    Text(
+                      DateFormat("yyyy/MM/dd").format(date)
+                    )
+                  ],
+                ),
+                Text(issueTitle),
+                Row(
+                  children: scores,
                 )
               ],
             ),
-            Text(issueTitle),
-            Row(
-              children: scores,
-            )
-          ],
-        ),
-      ),
+          ),
+        )
+      ],
     );
   }
 }

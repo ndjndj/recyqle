@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:recyqle/home/dash_pick_up.dart';
 import 'package:recyqle/home/score.dart';
 
 class DashBoard extends StatelessWidget {
@@ -50,9 +51,9 @@ class DashBoard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Score(title: "ケイゾク", score: 17.toString(), unit: "ニチ"),
-                Score(title: "レンゾク", score: 17.toString(), unit: "モン"),
-                Score(title: "ジゾク", score: 17.toString(), unit: "ジカン"),
+                Score(title: "ケイゾク", score: 17, unit: "ニチ"),
+                Score(title: "レンゾク", score: 17, unit: "モン"),
+                Score(title: "ジゾク", score: 17, unit: "ジカン"),
               ],
             ),
           ),
@@ -60,29 +61,19 @@ class DashBoard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "トクイ",
-                      style: GoogleFonts.rocknRollOne(
-                        fontSize: 16,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      elevation: 8.0,
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width / 2.4,
-                        height: 100,
-                        child: Center(child: Text("graph")),
-                      ),
-                    ),
+                child: DashPickUp(
+                  no: 12,
+                  mainTitle: "トクイ",
+                  date: DateTime.now(),
+                  issueTitle: "英語問題集p.12~14",
+                  scores: [
+                    Score(title: "ケイゾク", score: 17, unit: "ニチ"),
+                    Score(title: "レンゾク", score: 17, unit: "モン"),
+                    Score(title: "ジゾク", score: 17, unit: "ジカン"),
                   ],
-                ),
+                  width: MediaQuery.of(context).size.width / 2.4,
+                  height: 160
+                )
               ),
               SizedBox(
                 child: Column(

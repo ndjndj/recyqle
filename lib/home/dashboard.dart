@@ -71,8 +71,8 @@ class DashBoard extends StatelessWidget {
                     Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
                     Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
                   ],
-                  width: MediaQuery.of(context).size.width / 2.4,
-                  height: 100
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 140
                 )
               ),
               SizedBox(
@@ -86,8 +86,8 @@ class DashBoard extends StatelessWidget {
                     Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
                     Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
                   ],
-                  width: MediaQuery.of(context).size.width / 2.4,
-                  height: 100
+                  width: MediaQuery.of(context).size.width / 2.2,
+                  height: 140
                 )
               ),
             ],

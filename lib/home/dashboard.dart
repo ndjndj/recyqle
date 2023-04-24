@@ -66,43 +66,32 @@ class DashBoard extends StatelessWidget {
                   mainTitle: "トクイ",
                   date: DateTime.now(),
                   issueTitle: "英語問題集p.12~14",
-                  scores: [
+                  scores: const [
                     Score(title: "ケイゾク", score: 17, unit: "ニチ", sizingFactor: 0.7,),
                     Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
                     Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
                   ],
                   width: MediaQuery.of(context).size.width / 2.4,
-                  height: 140
+                  height: 100
                 )
               ),
               SizedBox(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "ニガテ",
-                      style: GoogleFonts.rocknRollOne(
-                        fontSize: 16,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                    Card(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      elevation: 8.0,
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width / 2.4,
-                        height: 100,
-                        child: Center(child: Text("graph")),
-                      ),
-                    ),
+                child: DashPickUp(
+                  no: 12,
+                  mainTitle: "ニガテ",
+                  date: DateTime.now(),
+                  issueTitle: "英語問題集p.12~14",
+                  scores: const [
+                    Score(title: "ケイゾク", score: 17, unit: "ニチ", sizingFactor: 0.7,),
+                    Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
+                    Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
                   ],
-                ),
-              )
+                  width: MediaQuery.of(context).size.width / 2.4,
+                  height: 100
+                )
+              ),
             ],
           )
-          
         ],
       ),
     );

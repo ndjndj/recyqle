@@ -39,8 +39,10 @@ class DashPickUp extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
-                      "No.${no.toString()}"
+                    Expanded(
+                      child: Text(
+                        "No.${no.toString()}"
+                      ),
                     ),
 
                     Text(

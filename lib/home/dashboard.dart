@@ -67,9 +67,9 @@ class DashBoard extends StatelessWidget {
                   date: DateTime.now(),
                   issueTitle: "英語問題集p.12~14",
                   scores: const [
-                    Score(title: "ケイゾク", score: 17, unit: "ニチ", sizingFactor: 0.7,),
-                    Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
-                    Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
+                    Score(title: "モンダイスウ", score: 17, unit: "モン", sizingFactor: 0.6,),
+                    Score(title: "セイカイリツ", score: 17, unit: "%", sizingFactor: 0.6),
+                    Score(title: "チョウセン", score: 17, unit: "カイ", sizingFactor: 0.6),
                   ],
                   width: MediaQuery.of(context).size.width / 2.2,
                   height: 140
@@ -82,9 +82,9 @@ class DashBoard extends StatelessWidget {
                   date: DateTime.now(),
                   issueTitle: "英語問題集p.12~14",
                   scores: const [
-                    Score(title: "ケイゾク", score: 17, unit: "ニチ", sizingFactor: 0.7,),
-                    Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
-                    Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
+                    Score(title: "モンダイスウ", score: 17, unit: "モン", sizingFactor: 0.6,),
+                    Score(title: "セイカイリツ", score: 17, unit: "%", sizingFactor: 0.6),
+                    Score(title: "チョウセン", score: 17, unit: "カイ", sizingFactor: 0.6),
                   ],
                   width: MediaQuery.of(context).size.width / 2.2,
                   height: 140

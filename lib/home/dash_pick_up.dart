@@ -43,15 +43,15 @@ class DashPickUp extends StatelessWidget {
                     left: 8.0,
                     top: 8.0,
                     right: 8.0,
-                    bottom: 4.0
                   ),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
                         child: Text(
                           "No.${no.toString()}",
                           style: const TextStyle(
-                            fontSize: 16
+                            fontSize: 14
                           ),
                         ),
                       ),
@@ -59,16 +59,26 @@ class DashPickUp extends StatelessWidget {
                       Text(
                         DateFormat("yyyy/MM/dd").format(date),
                         style: const TextStyle(
-                          fontSize: 12
+                          fontSize: 10
                         ),
                       )
                     ],
                   ),
                 ),
                 
-                Text(
-                  issueTitle,
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8.0,
+                    vertical: 4.0
+                  ),
+                  child: Text(
+                    issueTitle,
+                    style: const TextStyle(
+                      fontSize: 16
+                    ),
+                  ),
                 ),
+                
                 Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 8.0

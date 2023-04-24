@@ -29,7 +29,7 @@ class DashPickUp extends StatelessWidget {
         Text(mainTitle),
         Card(
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
           ),
           elevation: 8.0,
           child: Container(

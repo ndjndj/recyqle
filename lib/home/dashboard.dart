@@ -12,7 +12,7 @@ class DashBoard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         side: BorderSide(
           color: Color(0xFF333333)
         )

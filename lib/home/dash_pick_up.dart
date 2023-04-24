@@ -49,12 +49,18 @@ class DashPickUp extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          "No.${no.toString()}"
+                          "No.${no.toString()}",
+                          style: const TextStyle(
+                            fontSize: 16
+                          ),
                         ),
                       ),
 
                       Text(
-                        DateFormat("yyyy/MM/dd").format(date)
+                        DateFormat("yyyy/MM/dd").format(date),
+                        style: const TextStyle(
+                          fontSize: 12
+                        ),
                       )
                     ],
                   ),

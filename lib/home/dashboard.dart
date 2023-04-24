@@ -67,9 +67,9 @@ class DashBoard extends StatelessWidget {
                   date: DateTime.now(),
                   issueTitle: "英語問題集p.12~14",
                   scores: [
-                    Score(title: "ケイゾク", score: 17, unit: "ニチ"),
-                    Score(title: "レンゾク", score: 17, unit: "モン"),
-                    Score(title: "ジゾク", score: 17, unit: "ジカン"),
+                    Score(title: "ケイゾク", score: 17, unit: "ニチ", sizingFactor: 0.7,),
+                    Score(title: "レンゾク", score: 17, unit: "モン", sizingFactor: 0.7),
+                    Score(title: "ジゾク", score: 17, unit: "ジカン", sizingFactor: 0.7),
                   ],
                   width: MediaQuery.of(context).size.width / 2.4,
                   height: 140

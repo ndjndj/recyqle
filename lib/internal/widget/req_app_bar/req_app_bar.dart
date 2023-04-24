@@ -12,7 +12,7 @@ class ReqAppBar extends StatelessWidget with PreferredSizeWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
   @override
-  Size get preferredSize => const Size.fromHeight(56);
+  Size get preferredSize => const Size.fromHeight(40);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class ReqAppBar extends StatelessWidget with PreferredSizeWidget {
           },
           icon: FaIcon(
             FontAwesomeIcons.gears,
-            size: 32,
+            size: 28,
             color: Theme.of(context).colorScheme.tertiary
           )
         )

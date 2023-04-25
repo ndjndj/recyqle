@@ -1,4 +1,6 @@
 import "package:flutter/material.dart";
+import "package:font_awesome_flutter/font_awesome_flutter.dart";
+import "package:recyqle/common/req_text_field/req_text_field.dart";
 
 class Add extends StatefulWidget {
   const Add({super.key});
@@ -8,7 +10,7 @@ class Add extends StatefulWidget {
 }
 
 class _State extends State<Add> {
-  
+  final c = TextEditingController();
   @override 
   void initState() {
     super.initState();
@@ -25,17 +27,44 @@ class _State extends State<Add> {
           )
         ),
         elevation: 8.0,
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text("No.12"),
-                Text("2023/04/23"),
-              ]
-            ),
-            SizedBox(),
-
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Text("No.12"),
+                  Text("2023/04/23"),
+                ]
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.6,
+                height: MediaQuery.of(context).size.width * 0.6,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      FaIcon(FontAwesomeIcons.plus, size: 48),
+                      Text("画像を追加する")
+                    ],
+                  ),
+                ),
+              ),
+              ReqTextField(
+                margin: EdgeInsets.symmetric(horizontal: 8.0),
+                textController: c, 
+                title: "問題", 
+                hintText: "",
+                minLines: 4,
+                maxLines: null,
+                textInputType: TextInputType.multiline,
+              ),
+              
+            ],
+          )
         )
       )  
     );

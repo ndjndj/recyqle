@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:font_awesome_flutter/font_awesome_flutter.dart";
+import "package:recyqle/edit/add.dart";
 import "package:recyqle/home/dashboard.dart";
 import "package:recyqle/home/do_my_best.dart";
 
@@ -13,7 +14,7 @@ class NavBar {
     {
       'label': 'add',
       'icon': FaIcon(FontAwesomeIcons.plus, size: 20),
-      'page': Text("add"),
+      'page': Add(),
     },
     {
       'label': 'list',

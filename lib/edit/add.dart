@@ -27,6 +27,13 @@ class _State extends State<Add> {
         elevation: 8.0,
         child: Column(
           children: [
+            Row(
+              children: [
+                Text("No.12"),
+                Text("2023/04/23"),
+              ]
+            ),
+            SizedBox(),
 
           ],
         )
